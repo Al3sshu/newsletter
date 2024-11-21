@@ -1,4 +1,4 @@
-
+import successImg from './assets/icon-success.svg';
 
 const App = () =>{
   return(
@@ -28,6 +28,20 @@ const App = () =>{
           </form>
         </div>
       </div>
+
+      {/* Success and Error state template*/}
+
+      <div className="message">
+        <div className="success-msg">
+          <img src={successImg} alt=''/>
+          <h2>Thanks for subscribing!</h2>
+          <p> A confirmation email has been sent to ash@loremcompany.com. 
+          Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button className='dismiss-btn'>Dismiss message</button>
+      </div>
+
+
     </div>
   )
 }

@@ -128,6 +128,7 @@ button{
     background-image: url(./assets/illustration-sign-up-desktop.svg);
     height: 100%;
     width: 400px;
+    border-radius: 1rem;
   }
 
   .form-container{
@@ -136,5 +137,9 @@ button{
     justify-content: space-between;
     flex-direction: row-reverse;
     background-color: var(--White);
+    gap: 2rem;
+    height: 90%;
+    border-radius: 1rem;
+    padding: 1rem;
   }
 }
