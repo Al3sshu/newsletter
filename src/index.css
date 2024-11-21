@@ -21,7 +21,7 @@ body{
 
 img{
   max-width: 100%;
-  display: none;
+  display: block;
 }
 
 .panel{
@@ -38,6 +38,7 @@ img{
   width: 100%;
   max-width: 800px;
   margin-inline: auto;
+  
 }
 
 .img{
@@ -110,7 +111,48 @@ button{
   height: 45px;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
 
+}
+
+button:hover{
+  background-color: var(--Tomato);
+  box-shadow: 0 0 15px var(--Tomato);
+}
+
+/* Message*/
+.message{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding-inline: 1rem;
+  
+}
+
+.success-msg{
+  margin-top:5rem;
+  display: none;
+}
+
+.success-img img{
+  margin-bottom: 1rem;
+}
+
+.success-msg h2{
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.err-msg{
+  margin-top: 4rem;
+  font-size: 1.2rem;
+ 
+}
+
+.dismiss-btn{
+  margin: 1rem;
 }
 
 /* Media query*/
@@ -141,5 +183,35 @@ button{
     height: 90%;
     border-radius: 1rem;
     padding: 1rem;
+  
+  }
+
+  /*Message*/
+  .message{
+    display: none;
+    background-color: var(--White);
+    max-width: 400px;
+    height: 300px;
+    border-radius: 1rem;
+    padding-inline: 1.5rem;
+  }
+
+  .success-msg{
+    margin-top:2rem;
+  }
+
+  .success-msg img{
+    width: 50px;
+  }
+  .success-msg p{
+    margin-bottom: 1rem;
+  }
+
+  .err-msg{
+    margin-bottom: 4rem;
+  }
+
+  .dismiss-btn{
+    margin: 0;
   }
 }

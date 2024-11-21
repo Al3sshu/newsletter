@@ -38,12 +38,17 @@ const App = () =>{
           <p> A confirmation email has been sent to ash@loremcompany.com. 
           Please open it and click the button inside to confirm your subscription.</p>
         </div>
+
+      <div className="err-msg">
+        <p>You are already added to our waitlist. So stay tuned for more update</p>
+      </div>
+
         <button className='dismiss-btn'>Dismiss message</button>
       </div>
 
 
     </div>
-  )
-}
+  );
+};
 
 export default App
