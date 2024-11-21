@@ -85,9 +85,21 @@ li::before{
 li:not(:last-child){
   margin-bottom: 0.5rem;
 }
+
+.form .d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.form .d-flex p{
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--Tomato);
+}
+
 label{
   display: inline-block;
-  margin-bottom: 0.5rem;
   font-weight: 500;
   
 }
@@ -98,11 +110,22 @@ input, button{
   border-radius: 0.4rem;
 }
 
+
 input{
   border: 1px solid var(--Grey);
   height: 45px;
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
+}
+
+.danger{
+  border: 1.5px solid var(--Tomato);
+  background-color: #ffe8e6;
+  color: var(--Grey);
+}
+
+.danger::placeholder{
+  color: var(--Tomato);
 }
 
 button{
@@ -112,6 +135,7 @@ button{
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3 ease;
 
 }
 

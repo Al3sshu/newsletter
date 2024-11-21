@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import successImg from './assets/icon-success.svg';
 
 const App = () =>{
+  const [email, setEmail]= useState('');
+  const [emailErrorMessage, setEmailErrorMessage]= useState('');
+
   return(
     <div className="panel">
 
@@ -19,10 +23,15 @@ const App = () =>{
             </ul>
           </div>
 
-          <form className="form">
+          <form onSubmit={handleSubmit} className="form">
+
+            <div className="d-flex">
             <label htmlFor="email">Email Address</label> 
-            <br/>
-            <input type="text" id="email" placeholder="email@company.com"/>
+            <p>Valid email required</p>
+            </div>
+            
+           
+            <input className='danger' type="text" id="email" placeholder="email@company.com"/>
             <br/>
             <button type="submit"> Subscribe to monthly newsletter</button>
           </form>
