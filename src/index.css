@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+--Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+img{
+  max-width: 100%;
+  display: none;
+}
+
+.panel{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background-color: var(--White);
+  color: var(--Charcoal-Grey);
+}
+
+.form-container{
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.img{
+  background-image:url(./assets/illustration-sign-up-mobile.svg);
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.form-content{
+  padding-inline: 1.2rem;
+  margin-block: 2rem;
+}
+
+.form-content  h1{
+  margin-bottom: 1rem;
+}
+
+.form-content p{
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+ul{
+  margin-bottom: 2rem;
+}
+
+li{
+  font-weight: 500;
+  list-style: none;
+}
+
+li::before{
+  content: url(./assets/icon-list.svg);
+  position: relative;
+  top: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+li:not(:last-child){
+  margin-bottom: 0.5rem;
+}
+label{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  
+}
+
+input, button{
+  width: 100%;
+  font-family: inherit;
+  border-radius: 0.4rem;
+}
+
+input{
+  border: 1px solid var(--Grey);
+  height: 45px;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+button{
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  height: 45px;
+  border: none;
+  font-size: 1rem;
+
+}
+
+/* Media query*/
+
+@media (min-width:768px){
+  body{
+    background-color: var(--Dark-Slate-Grey);
+  }
+
+  .panel{
+    background-color: transparent;
+  }
+
+  .img{
+    background-image: url(./assets/illustration-sign-up-desktop.svg);
+    height: 100%;
+    width: 400px;
+  }
+
+  .form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-color: var(--White);
+  }
+}
